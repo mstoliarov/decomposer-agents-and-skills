@@ -1,2 +1,6 @@
 *.backup.*
 .DS_Store
+
+# Изоляция личных целей и принципов
+context/GOALS.md
+context/PRINCIPLES.md

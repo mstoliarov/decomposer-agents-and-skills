@@ -46,5 +46,17 @@ for a in "${AGENTS[@]}"; do
 done
 
 echo
+echo "Инициализация локального контекста:"
+if [ ! -f "$REPO_DIR/context/GOALS.md" ] && [ -f "$REPO_DIR/context/GOALS.template.md" ]; then
+    cp "$REPO_DIR/context/GOALS.template.md" "$REPO_DIR/context/GOALS.md"
+    echo "  + Создан context/GOALS.md из шаблона"
+fi
+if [ ! -f "$REPO_DIR/context/PRINCIPLES.md" ] && [ -f "$REPO_DIR/context/PRINCIPLES.template.md" ]; then
+    cp "$REPO_DIR/context/PRINCIPLES.template.md" "$REPO_DIR/context/PRINCIPLES.md"
+    echo "  + Создан context/PRINCIPLES.md из шаблона"
+fi
+
+echo
 echo "Готово. Перезапусти Claude Code, дальше — /advisor или /architect."
 echo "Файл целей: $REPO_DIR/context/GOALS.md (пока пуст — /advisor предложит заполнить)"
+
