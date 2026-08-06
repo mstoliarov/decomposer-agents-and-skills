@@ -15,15 +15,15 @@
 ## Установка
 
 ```bash
-git clone git@github.com:mstoliarov/decomposer-agents-and-skills.git ~/decomposer
-bash ~/decomposer/install.sh
+git clone git@github.com:mstoliarov/decomposer-agents-and-skills.git ~/PROJECTS/decomposer
+bash ~/PROJECTS/decomposer/install.sh
 ```
 
 Ставится симлинками в `~/.claude/skills/` и `~/.claude/agents/` — то есть работает **во всех
 проектах**, а не в одном. Обновление:
 
 ```bash
-cd ~/decomposer && git pull
+cd ~/PROJECTS/decomposer && git pull
 ```
 
 Переустановка после `git pull` не нужна — симлинки указывают на репозиторий.
