@@ -7,7 +7,7 @@ set -euo pipefail
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CLAUDE_DIR="${CLAUDE_CONFIG_DIR:-$HOME/.claude}"
 
-SKILLS=(advisor architect)
+SKILLS=(mentor architect)
 AGENTS=(goal-context option-scout codebase-cartographer)
 
 link() {
@@ -57,6 +57,6 @@ if [ ! -f "$REPO_DIR/context/PRINCIPLES.md" ] && [ -f "$REPO_DIR/context/PRINCIP
 fi
 
 echo
-echo "Готово. Перезапусти Claude Code, дальше — /advisor или /architect."
-echo "Файл целей: $REPO_DIR/context/GOALS.md (пока пуст — /advisor предложит заполнить)"
+echo "Готово. Перезапусти Claude Code, дальше — /mentor или /architect."
+echo "Файл целей: $REPO_DIR/context/GOALS.md (пока пуст — /mentor предложит заполнить)"
 
